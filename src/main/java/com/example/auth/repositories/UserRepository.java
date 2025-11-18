@@ -8,5 +8,6 @@ import com.example.auth.entities.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-	UserDetails findByLogin(String login);
+	User findByLogin(String login);
+	Boolean existsByLogin(String login);
 }
